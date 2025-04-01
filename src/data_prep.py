@@ -38,3 +38,65 @@ df = df[[
 
 save_path = os.path.join(data_path, 'SPY_options.parquet')
 df.to_parquet(save_path)
+
+df_option = df.copy()
+# Define shared columns
+common_cols = [
+    'QUOTE_DATE',
+    'UNDERLYING_LAST',
+    'EXPIRE_DATE',
+    'DTE',
+    'STRIKE',
+    'STRIKE_DISTANCE',
+    'STRIKE_DISTANCE_PCT'
+]
+
+# Define mappings for calls and puts
+calls_map = {
+    'C_BID': 'BID',
+    'C_ASK': 'ASK',
+    'C_SIZE': 'SIZE',
+    'C_LAST': 'LAST',
+    'C_DELTA': 'DELTA',
+    'C_GAMMA': 'GAMMA',
+    'C_VEGA': 'VEGA',
+    'C_THETA': 'THETA',
+    'C_RHO': 'RHO',
+    'C_IV': 'IV',
+    'C_VOLUME': 'VOLUME'
+}
+
+puts_map = {
+    'P_BID': 'BID',
+    'P_ASK': 'ASK',
+    'P_SIZE': 'SIZE',
+    'P_LAST': 'LAST',
+    'P_DELTA': 'DELTA',
+    'P_GAMMA': 'GAMMA',
+    'P_VEGA': 'VEGA',
+    'P_THETA': 'THETA',
+    'P_RHO': 'RHO',
+    'P_IV': 'IV',
+    'P_VOLUME': 'VOLUME'
+}
+
+df_calls = (
+    df_option[common_cols + list(calls_map.keys())]
+    .rename(columns=calls_map)
+)
+df_calls['TYPE'] = 'C'
+
+df_puts = (
+    df_option[common_cols + list(puts_map.keys())]
+    .rename(columns=puts_map)
+)
+df_puts['TYPE'] = 'P'
+
+df_long = (
+    pd.concat([df_calls, df_puts], ignore_index=True)
+    .sort_values(by=['QUOTE_DATE', 'EXPIRE_DATE', 'STRIKE'])
+    .reset_index(drop=True)
+)
+
+save_path_l = os.path.join(data_path, 'SPY_options_l.parquet')
+df_long.to_parquet(save_path_l)
