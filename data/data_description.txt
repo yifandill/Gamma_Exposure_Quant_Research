@@ -1,0 +1,16 @@
+Underlying Asset: SPY
+    NYSEARCA: SPY, SPDR S&P 500 ETF Trust
+
+spy_1d.pkl
+    Historical daily close prices for SPY (2000/01/03-2023/06/01).
+
+SPY_options - folder
+    Raw data for historical SPY option chains (2010/01/04-2022/12/30). Daily quoted at 16:00.
+    Zipped in 7z files.
+
+SPY_options.parquet
+    Processed data for historical SPY option chains, daily at market close (2010/01/04-2022/12/30).
+    Columns:
+        'QUOTE_DATE', 'UNDERLYING_LAST', 'EXPIRE_DATE', 'DTE', 'STRIKE', 'STRIKE_DISTANCE', 'STRIKE_DISTANCE_PCT',
+        'C_BID', 'C_ASK', 'C_SIZE', 'C_LAST', 'C_DELTA', 'C_GAMMA', 'C_VEGA', 'C_THETA', 'C_RHO', 'C_IV', 'C_VOLUME',
+        'P_BID', 'P_ASK', 'P_SIZE', 'P_LAST', 'P_DELTA', 'P_GAMMA', 'P_VEGA', 'P_THETA', 'P_RHO', 'P_IV', 'P_VOLUME'
