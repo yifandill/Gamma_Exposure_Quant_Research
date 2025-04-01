@@ -14,3 +14,10 @@ SPY_options.parquet
         'QUOTE_DATE', 'UNDERLYING_LAST', 'EXPIRE_DATE', 'DTE', 'STRIKE', 'STRIKE_DISTANCE', 'STRIKE_DISTANCE_PCT',
         'C_BID', 'C_ASK', 'C_SIZE', 'C_LAST', 'C_DELTA', 'C_GAMMA', 'C_VEGA', 'C_THETA', 'C_RHO', 'C_IV', 'C_VOLUME',
         'P_BID', 'P_ASK', 'P_SIZE', 'P_LAST', 'P_DELTA', 'P_GAMMA', 'P_VEGA', 'P_THETA', 'P_RHO', 'P_IV', 'P_VOLUME'
+
+SPY_options_l.parquet
+    Processed data for historical SPY option chains, daily at market close (2010/01/04-2022/12/30). Long format.
+    Columns:
+        'QUOTE_DATE', 'UNDERLYING_LAST', 'EXPIRE_DATE', 'DTE', 'STRIKE', 'STRIKE_DISTANCE', 'STRIKE_DISTANCE_PCT',
+        'BID', 'ASK', 'SIZE', 'LAST', 'DELTA', 'GAMMA', 'VEGA', 'THETA', 'RHO', 'IV', 'VOLUME', 'TYPE'
+    'TYPE': 'C' represents call option, 'P' represents put option.
