@@ -23,8 +23,8 @@ col = [x.strip('[]') for x in col]
 df.rename(columns=dict(zip(df.columns, col)), inplace=True)
 
 df = df.drop(['QUOTE_UNIXTIME', 'QUOTE_READTIME', 'QUOTE_TIME_HOURS', 'EXPIRE_UNIX'], axis=1)
-str_cols = df.select_dtypes(include=['object']).columns
-df[str_cols] = df[str_cols].apply(lambda c: c.str.strip()).replace('', np.nan)
+df = df.map(lambda x: x.strip() if isinstance(x, str) else x)
+df = df.map(lambda x: np.nan if x == '' else x)
 df['QUOTE_DATE'] = pd.to_datetime(df['QUOTE_DATE'])
 df['EXPIRE_DATE'] = pd.to_datetime(df['EXPIRE_DATE'])
 float_cols = df.columns.difference(['QUOTE_DATE', 'EXPIRE_DATE', 'EXPIRE_UNIX', 'C_SIZE', 'P_SIZE'])
