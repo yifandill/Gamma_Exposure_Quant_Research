@@ -1,2 +1,4 @@
 *.parqued filter=lfs diff=lfs merge=lfs -text
 *.parquet filter=lfs diff=lfs merge=lfs -text
+SPY_new.parquest filter=lfs diff=lfs merge=lfs -text
+data/SPY_new.parquet filter=lfs diff=lfs merge=lfs -text
