@@ -1,15 +1,21 @@
-# Gamma Exposure Factor Strategy
+# Gamma Exposure Quant Research
 
-This is the course project for FE5214.
-
-## Basic Logic
+This is the GitHub repository for the course project of FE5214.
 
 ## Data
 
-We use daily data for SPY and SPY option chains for this project. See details in `data_description.txt` from `data` folder.
+All the data we used in this project can be reached in the `data` folder with details described by the file `data_description.txt` from `data` folder.
 
-A demo for data acquisition can be seen from `demo_data_acquire.ipynb` from `src` folder.
+A demo for some of the data acquisition can be seen from `demo_data_acquire.ipynb` from `src` folder. Others can be found in relevant jupyter notebooks when doing related tasks.
 
-## Tasks
+## Codes
+
+All the source codes for this project can be reached in the `src` folder.
+
+Two simple strategy trails can be seen from `Mean-Reverting Strategy.ipynb` and `straddle_strategy.ipynb`.
+
+Two interactive plots in html format produced by `plotly` can be found in the `results` folder.
 
 ## References
+
+References and some relevant documentations can be found in the `doc` folder.
