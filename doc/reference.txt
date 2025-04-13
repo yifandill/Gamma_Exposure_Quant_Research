@@ -1,0 +1,7 @@
+[1] Barbon, Andrea and Buraschi, Andrea, Gamma Fragility (November 5, 2020). University of St.Gallen, School of Finance Research Paper No. 2020/05.
+[2] Baltussen, Guido and Da, Zhi and Lammers, Sten and Martens, Martin, Hedging Demand and Market Intraday Momentum (January 2, 2021). Journal of Financial Economics, Volume 142, Issue 1, October 2021, Pages 377–403.
+[3] Gamma Exposure (GEX): Quantifying hedge rebalancing in SPX options (2016). SqueezeMetrics.
+[4] Short is Long: Using dark pool short sales as a proxy for buying activity (2018). SqueezeMetrics.
+[5] The Implied Order Book: Measuring S&P 500 liquidity with SPX options (2020). SqueezeMetrics.
+[6] Perfiliev, S., How to calculate gamma exposure (GEX) and zero gamma level (2022, February 3). Perfiliev Financial Blog. https://perfiliev.com/blog/how-to-calculate-gamma-exposure-and-zero-gamma-level/.
+[7] 期权情绪指数 - 指数使用 (2020, August 8). RiskMacro. https://riskmacro.com/document/390.html.
