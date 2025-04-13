@@ -12,6 +12,8 @@ A demo for some of the data acquisition can be seen from `demo_data_acquire.ipyn
 
 All the source codes for this project can be reached in the `src` folder.
 
+Experiment on GEX computation can be found in `Computation of GEX.ipynb`.
+
 Two simple strategy trails can be seen from `Mean-Reverting Strategy.ipynb` and `straddle_strategy.ipynb`.
 
 Two interactive plots in html format produced by `plotly` can be found in the `results` folder.
