@@ -21,3 +21,29 @@ SPY_options_l.parquet
         'QUOTE_DATE', 'UNDERLYING_LAST', 'EXPIRE_DATE', 'DTE', 'STRIKE', 'STRIKE_DISTANCE', 'STRIKE_DISTANCE_PCT',
         'BID', 'ASK', 'SIZE', 'LAST', 'DELTA', 'GAMMA', 'VEGA', 'THETA', 'RHO', 'IV', 'VOLUME', 'TYPE'
     'TYPE': 'C' represents call option, 'P' represents put option.
+
+sqzme.csv
+    Daily data from squeezemetrics.com (2011/02/05-2025/04/04)
+    Columns:
+        'date', 'price', 'dix', 'gex'
+
+VIX_History.csv
+    Historical VIX (2010/01/04-2025/04/04)
+    Columns:
+        'DATE', 'OPEN', 'HIGH', 'LOW', 'CLOSE'
+
+SPY_10Y_latest.csv
+    SPY price data (2015/04/06-2025/04/04)
+    Columns:
+        'DATE', 'close_price'
+
+SPY_new.parquet
+    historical SPY option chains, daily at market close (2011/01/03-2022/12/30)
+    Columns: 'secid', 'date', 'symbol', 'symbol_flag', 'exdate', 'last_date', 'cp_flag',
+ 'strike_price', 'best_bid', 'best_offer', 'volume', 'open_interest', 'impl_volatility',
+ 'delta', 'gamma', 'vega', 'theta', 'optionid', 'cfadj', 'am_settlement', 'contract_size',
+ 'ss_flag', 'forward_price', 'expiry_indicator', 'root', 'suffix', 'cusip', 'ticker',
+ 'sic', 'index_flag', 'exchange_d', 'class', 'issue_type', 'industry_group', 'issuer',
+ 'div_convention', 'exercise_style', 'am_set_flag'
+
+
